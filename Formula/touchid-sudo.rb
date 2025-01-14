@@ -13,6 +13,10 @@ class TouchidSudo < Formula
     end
   end
 
+  head do
+    url "https://github.com/delorenj/touchid-setup.git", branch: "main"
+  end
+
   def install
     if Hardware::CPU.arm?
       bin.install "touchid-setup-darwin-arm64" => "touchid-setup"
